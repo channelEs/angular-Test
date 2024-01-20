@@ -1,0 +1,74 @@
+<!--<div class="view-container">
+    <div class="container">
+        <div class="ilu-div">
+            <img src="/assets/login-assets/svg/undraw_starry_window_re_0v82.svg" />
+        </div>
+        <div class="log-div">
+            <form class="form-container">
+                <h1>Welcome!</h1>
+                <div class="input-container" >
+                    <div class="icon"></div>
+                    <input 
+                        type="text" 
+                        name="username"
+                        [(ngModel)]="username"
+                        id="username" 
+                        placeholder="Username" 
+                    />
+                </div>
+                <div class="input-container" >
+                    <div class="icon"></div>
+                    <input  
+                        type="{{ isPasswordVisible ? 'password' : 'text'}}" 
+                        name="password"
+                        [(ngModel)]="password"
+                        id="password" 
+                        placeholder="Password" 
+                    />
+                    <button
+                        class="{{ isPasswordVisible ? 'hidePas' : 'showPas'}}"
+                        type="checkbox"
+                        (click)="changePasswordVisibility()"
+                    >X</button>
+                </div>
+                <div>
+                    <button class="buttonlog" (click)="onLogIn()">LOG IN</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>-->
+
+<div class="container">
+    <div>
+        <img src="/assets/login-assets/svg/login-illustration.svg" />
+    </div>
+    <div>
+        <div class="form-container">
+            <h1>Enter credentials</h1>
+            <form>
+                <div class="input-container">
+                    <img class="icon" src="/assets/login-assets/svg/user.svg" />
+                    <input
+                        name="username"
+                        [(ngModel)]="username"
+                        placeholder="Enter username"
+                        type="text"
+                    />
+                </div>
+                <div class="input-container">
+                    <img class="icon" src="/assets/login-assets/svg/lock.svg" />
+                    <input
+                        name="password"
+                        [(ngModel)]="password"
+                        placeholder="Enter password"
+                        type="password"
+                    />
+                </div>
+                <button (click)="onLogIn()">Login</button>
+                <span *ngIf="isFormValid === false" class="invalid">Please enter valid credentials.</span>
+                <span *ngIf="errorOnLogin" class="error">There has been an error while login in.</span>
+            </form>
+        </div>
+    </div>
+</div>

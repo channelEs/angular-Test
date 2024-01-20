@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url('/assets/login-assets/font/Inter-Bold.ttf') format('truetype'); // Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5
+}
+
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('/assets/login-assets/font/Inter-Regular.ttf') format('truetype'); // Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter-Regular';
+}
+
+$font-regular: Inter-Regular;
+$font-bold: Inter-Bold;
+
+$white-clear-color: #f1f5f9;
+$white-dark-color: #d8e1ee;
+$blue-clear-color: #1e46d9;
+$blue-dark-color: #0b2239;
+$black-dark-color: #000807;

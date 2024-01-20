@@ -1,0 +1,36 @@
+<div class="container">
+    <div>
+        <a class="home" routerLink="/dashboard" routerLinkActive="focus">
+            HOME
+        </a>
+        <a routerLink="/dashboard/Info-container-1" routerLinkActive="focus">
+            info container 1
+        </a>
+        <a class="sub" routerLink="/dashboard/subInfo-container-1.1" routerLinkActive="focus">
+            sub info container 1.1
+        </a>
+        <a class="sub" routerLink="/dashboard/subInfo-container-1.2" routerLinkActive="focus">
+            sub info container 1.2
+        </a>
+        <a class="sub" routerLink="/dashboard/subInfo-container-1.3" routerLinkActive="focus">
+            sub info container 1.3
+        </a>
+        <a routerLink="/dashboard/Info-container-2" routerLinkActive="focus">
+            info container 2
+        </a>
+        <a class="sub" routerLink="/dashboard/subInfo-container-2.1" routerLinkActive="focus">
+            sub info container 2.1
+        </a>
+    </div>
+    <div class="header-container">
+        <h1>{{ administrator.username }}</h1>
+        <div class="btn" (click)="returnlog()">
+            <h1>log out</h1>
+        </div>
+    </div>
+    <div class="router">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+

@@ -1,0 +1,100 @@
+@import '../../../styles';
+
+.container {
+    background-color: $white-clear-color;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+
+    > div {
+        width: 50%;
+
+        &:nth-child(1) {
+            background-color: $blue-dark-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        &:nth-child(2) {
+            background-color: $white-dark-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .form-container {
+        background-color: $blue-dark-color;
+        border-radius: 5px;
+        padding: 60px;
+        max-width: 500px;
+
+        h1 {
+            color: $white-clear-color;
+            font-size: 40px;
+            margin-top: 0;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+
+            .input-container {
+                width: 100%;
+                position: relative;
+
+                .icon {
+                    position: absolute;
+                    width: 20px;
+                    opacity: 0.6;
+                    left: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+
+            input {
+                width: 75%;
+                padding: 15px 15px 15px 45px;
+                margin: 10px 0;
+                font-size: 18px;
+                border: none;
+                border-radius: 10px;
+                outline: none;
+            }
+
+            button {
+                font-size: 18px;
+                padding: 10px 30px;
+                border: 2px solid $white-clear-color;
+                border-radius: 10px;
+                background-color: $blue-dark-color;
+                color: $white-clear-color;
+                font-weight: 600;
+                margin-top: 23px;
+                margin-bottom: 20px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $white-clear-color;
+                    color: $black-dark-color;
+                }
+            }
+
+            span {
+                display: block;
+                width: 100%;
+                font-weight: 900;
+
+                &.invalid {
+                    color: orange;
+                }
+
+                &.error {
+                    color: red;
+                }
+            }
+        }
+    }
+}
